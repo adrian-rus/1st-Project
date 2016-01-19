@@ -1,0 +1,50 @@
+.navbar{
+		border-radius: 0;
+		border:none;
+		border-color: transparent;
+		font-weight: bold;
+		font-size: 1.5em;
+		background-color: rgba(160,160,160,0.3);
+}
+
+.navbar-brand{
+	font-weight: bolder;
+	font-size: 2em;
+
+}
+
+body{
+		font: 400 15px/1.8 "Lato", "cursive", sans-serif;
+		background-color: rgb(200,200,200);
+
+	}
+
+ul{
+	text-transform: uppercase;
+	
+}
+
+.lnd{
+	display: flex;
+	flex-flow:column;
+	justify-content:center;
+	align-items:center;
+
+}
+
+.i{
+	position: relative;
+
+}
+
+.txt{
+	position: absolute;
+	padding: 25px;
+	margin:25px;
+	background-color: rgba(200,200,200,0.7);
+	border-radius: 5px;
+	font-size: 3em;
+	font-weight: bolder;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+}
