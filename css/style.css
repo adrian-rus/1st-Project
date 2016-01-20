@@ -1,7 +1,14 @@
+div{
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-ms-box-sizing:border-box;
+	box-sizing:border-box;
+	margin:0;
+	padding:0;
+}
 .navbar{
 		border-radius: 0;
 		border:none;
-		border-color: transparent;
 		font-weight: bold;
 		font-size: 1.5em;
 		background-color: rgba(160,160,160,0.3);
@@ -14,9 +21,9 @@
 }
 
 body{
-		font: 400 15px/1.8 "Lato", "cursive", sans-serif;
-		background-color: rgb(200,200,200);
-
+		font: 400 15px/1.8 "Open Sans","Lato", "cursive", sans-serif;
+		background-color: black;
+		
 	}
 
 ul{
@@ -24,27 +31,30 @@ ul{
 	
 }
 
-.lnd{
-	display: flex;
-	flex-flow:column;
-	justify-content:center;
-	align-items:center;
-
+footer{
+	text-transform:uppercase;
+	text-align:center;
 }
 
-.i{
-	position: relative;
-
+.link {
+	border:2px solid black;
 }
 
-.txt{
-	position: absolute;
-	padding: 25px;
-	margin:25px;
-	background-color: rgba(200,200,200,0.7);
-	border-radius: 5px;
-	font-size: 3em;
-	font-weight: bolder;
-	text-transform: uppercase;
-	letter-spacing: 3px;
+.container{
+	padding: 80px 120px;
+}
+
+.name{
+	opacity:0.7;
+	border: solid transparent 8px;
+	height:200px;
+	width:150px;
+}
+
+.name:hover{
+	border-color:#666666;
+}
+
+.preview{
+	display:hidden;
 }
