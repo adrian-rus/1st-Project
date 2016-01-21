@@ -59,10 +59,7 @@ footer{
 	display:hidden;
 }
 
-.item{
-	
-}
-
-a{
-	text-decoration:none;
+.glyphicon-shopping-cart{
+	height:20px;
+	width:20px;
 }
