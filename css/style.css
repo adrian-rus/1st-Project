@@ -23,7 +23,6 @@ div{
 body{
 		font: 400 15px/1.8 "Open Sans","Lato", "cursive", sans-serif;
 		background-color: black;
-		
 	}
 
 ul{
@@ -63,3 +62,36 @@ footer{
 	height:20px;
 	width:20px;
 }
+
+
+
+.carousel-caption h3{
+	color: #fff !important;
+}
+
+.td1{
+	background:#2d2d35;
+	color:#bdbdbd;
+}
+
+.td1 h3{
+	color: #fff;
+}
+
+.td1 p{
+	font-style: italic;
+}
+
+.btn{
+	padding: 10px 20px;
+	background-color: #333;
+	color: #f1f1f1;
+	border-radius: 0;
+}
+
+.btn:hover{
+	border:1px solid #333;
+	background-color: #fff;
+	color:#000;
+}
+
