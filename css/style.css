@@ -12,29 +12,55 @@ body{
 		background-color: black;
 		/*text-transform: uppercase;*/
 		text-align: center;
-		color: #666 !important;
+		color: #DCCCE8 !important;
 	}
 
 h1,h2,h3{
 	text-transform: uppercase;
 	letter-spacing: 4px;
-	color: #666 !important;
+	color: #AAEE46 !important;
 
 }
+
+footer{
+	color: #AAEE46 !important;
+	background-color: #6b585b;
+}
+
+input[type=text], input[type=number]{
+	background-color: #DCCCE8;
+}
+
+input[type=text]:focus, input[type=number]:focus{
+	border:2px solid #AAEE46;
+	background-color: #6b585b;
+}
+
+#comments{
+	background-color: #DCCCE8;
+
+}
+
+#comments:focus{
+	background-color: #6b585b;
+	border: 2px solid #AAEE46;
+
+}
+
 .navbar{
 		border-radius: 0;
 		font-weight: bold;
 		font-size: 18px !important;
 		letter-spacing: 4px;
-		background-color: #2d2d30;
+		background-color: #6b585b;
 		opacity: 0.8;
-		border-color: transparent;
-		color: #fff;
+		border:none;
+		color: #DCCCE8;
 		text-transform: uppercase;
 }
 
 .navbar li a, .navbar, .navbar-brand{
-	color: #d5d5d5 !important;
+	color: #DCCCE8 !important;
 
 }
 
@@ -44,17 +70,18 @@ h1,h2,h3{
 
 .navbar-nav li.active a{
 	color:#fff !important;
-	background-color: #29292c !important;
+	background-color: black !important;
 }
 
 .navbar-brand{
 	font-size: 20px !important;
 	font-weight: bolder;
+	color: #AAEE46 !important;
 }
 
 
 .carousel-caption h3{
-	color: #fff !important;
+	color: #AAEE46 !important;
 }
 
 .link {
@@ -73,7 +100,7 @@ h1,h2,h3{
 }
 
 .name:hover{
-	border-color:#667;
+	border-color:#9E868C;
 }
 
 .preview {
@@ -86,12 +113,8 @@ h1,h2,h3{
 }
 
 .td1{
-	background:#2d2d30;
-	color:#bdbdbd;
-}
-
-.td1 h3{
-	color: #fff;
+	background:black;
+	color:#DCCCE8;
 }
 
 .td1 p{
@@ -100,14 +123,14 @@ h1,h2,h3{
 
 .btn{
 	padding: 10px 20px;
-	background-color: #333;
-	color: #f1f1f1;
+	background-color: #6b585b;
+	color: black;
 	border-radius: 0;
 }
 
-.btn:hover{
+.btn:hover, .btn:focus{
 	border:1px solid #333;
-	background-color: #fff;
+	background-color: #DCCCE8;
 	color:#000;
 }
 
@@ -135,9 +158,21 @@ h1,h2,h3{
 }
 
 .glyphicon-shopping-cart, .glyphicon-play{
-	color: #fff !important;
+	color: #AAEE46 !important;
 }
 
 .show {
+
+}
+
+.list-group-item{
+	background-color: #DCCCE8;
+	color: black;
+
+}
+
+.thumbnail{
+	background-color: #DCCCE8;
+	color:black;
 
 }

@@ -1,7 +1,7 @@
 $(document).ready(function(){ 
     
     $('#search-btn').click(function(){
-      $('#search-bar').show();
+      $('#search-bar').toggleClass('show');
    });
 
     $('#show-play1').click(function(){ //how can i display only one at a time?
