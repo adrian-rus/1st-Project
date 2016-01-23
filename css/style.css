@@ -6,33 +6,89 @@ div{
 	margin:0;
 	padding:0;
 }
-.navbar{
-		border-radius: 0;
-		border:none;
-		font-weight: bold;
-		font-size: 1.5em;
-		background-color: rgba(160,160,160,0.3);
-}
-
-.navbar-brand{
-	font-weight: bolder;
-	font-size: 2em;
-
-}
 
 body{
 		font: 400 15px/1.8 "Open Sans","Lato", "cursive", sans-serif;
 		background-color: black;
+		/*text-transform: uppercase;*/
+		text-align: center;
+		color: #DCCCE8 !important;
 	}
 
-ul{
+h1,h2,h3{
 	text-transform: uppercase;
-	
+	letter-spacing: 4px;
+	color: #AAEE46 !important;
+
 }
 
 footer{
-	text-transform:uppercase;
-	text-align:center;
+	color: #AAEE46 !important;
+	background-color: #6b585b;
+}
+
+input[type=text], input[type=number]{
+	background-color: #DCCCE8;
+}
+
+input[type=text]:focus, input[type=number]:focus{
+	border:2px solid #AAEE46;
+	background-color: #6b585b;
+}
+
+#comments{
+	background-color: #DCCCE8;
+
+}
+
+#comments:focus{
+	background-color: #6b585b;
+	border: 2px solid #AAEE46;
+
+}
+
+.navbar{
+		border-radius: 0;
+		font-weight: bold;
+		font-size: 18px !important;
+		letter-spacing: 4px;
+		background-color: #6b585b;
+		opacity: 0.8;
+		border:none;
+		color: #DCCCE8;
+		text-transform: uppercase;
+}
+
+.navbar li a, .navbar, .navbar-brand{
+	color: #DCCCE8 !important;
+
+}
+
+<<<<<<< HEAD
+body{
+		font: 400 15px/1.8 "Open Sans","Lato", "cursive", sans-serif;
+		background-color: black;
+	}
+=======
+.navbar-nav li a:hover{
+	color: #fff !important;
+}
+>>>>>>> 28f917a15ab2116b04111211531a2aeef116aed7
+
+.navbar-nav li.active a{
+	color:#fff !important;
+	background-color: black !important;
+}
+
+.navbar-brand{
+	font-size: 20px !important;
+	font-weight: bolder;
+	color: #AAEE46 !important;
+}
+
+
+.carousel-caption h3{
+	color: #AAEE46 !important;
 }
 
 .link {
@@ -51,11 +107,11 @@ footer{
 }
 
 .name:hover{
-	border-color:#666666;
+	border-color:#9E868C;
 }
 
-.preview{
-	display:hidden;
+.preview {
+	display:none;
 }
 
 .glyphicon-shopping-cart{
@@ -63,6 +119,7 @@ footer{
 	width:20px;
 }
 
+<<<<<<< HEAD
 
 
 .carousel-caption h3{
@@ -76,6 +133,11 @@ footer{
 
 .td1 h3{
 	color: #fff;
+=======
+.td1{
+	background:black;
+	color:#DCCCE8;
+>>>>>>> 28f917a15ab2116b04111211531a2aeef116aed7
 }
 
 .td1 p{
@@ -84,6 +146,7 @@ footer{
 
 .btn{
 	padding: 10px 20px;
+<<<<<<< HEAD
 	background-color: #333;
 	color: #f1f1f1;
 	border-radius: 0;
@@ -95,3 +158,58 @@ footer{
 	color:#000;
 }
 
+=======
+	background-color: #6b585b;
+	color: black;
+	border-radius: 0;
+}
+
+.btn:hover, .btn:focus{
+	border:1px solid #333;
+	background-color: #DCCCE8;
+	color:#000;
+}
+
+#search-bar{
+	display: none;
+}
+
+#search-bar a{
+	padding: 10;
+	margin:0;
+}
+
+#search-bar input[type=text]{
+	background-color: #fff !important;
+	border-color: transparent;
+}
+
+#play1, #play2, #play3, #play4{
+	display: none;
+}
+
+#itunes{
+	text-decoration: none;
+	color: inherit;
+}
+
+.glyphicon-shopping-cart, .glyphicon-play{
+	color: #AAEE46 !important;
+}
+
+.show {
+
+}
+
+.list-group-item{
+	background-color: #DCCCE8;
+	color: black;
+
+}
+
+.thumbnail{
+	background-color: #DCCCE8;
+	color:black;
+
+}
+>>>>>>> 28f917a15ab2116b04111211531a2aeef116aed7
