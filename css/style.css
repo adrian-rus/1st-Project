@@ -8,16 +8,32 @@ div{
 }
 .navbar{
 		border-radius: 0;
-		border:none;
 		font-weight: bold;
-		font-size: 1.5em;
-		background-color: rgba(160,160,160,0.3);
+		font-size: 18px !important;
+		letter-spacing: 4px;
+		background-color: #2d2d30;
+		opacity: 0.8;
+		border-color: transparent;
+		color: #fff;
+}
+
+.navbar li a, .navbar, .navbar-brand{
+	color: #d5d5d5 !important;
+
+}
+
+.navbar-nav li a:hover{
+	color: #fff !important;
+}
+
+.navbar-nav li.active a{
+	color:#fff !important;
+	background-color: #29292c !important;
 }
 
 .navbar-brand{
+	font-size: 20px !important;
 	font-weight: bolder;
-	font-size: 2em;
-
 }
 
 body{
@@ -70,7 +86,7 @@ footer{
 }
 
 .td1{
-	background:#2d2d35;
+	background:#2d2d30;
 	color:#bdbdbd;
 }
 
@@ -95,3 +111,16 @@ footer{
 	color:#000;
 }
 
+#search-bar{
+	display: none;
+}
+
+#search-bar a{
+	padding: 10;
+	margin:0;
+}
+
+.navbar input[type=text]{
+	background-color: #fff !important;
+	border-color: transparent;
+}
