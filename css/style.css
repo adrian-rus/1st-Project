@@ -6,6 +6,21 @@ div{
 	margin:0;
 	padding:0;
 }
+
+body{
+		font: 400 15px/1.8 "Open Sans","Lato", "cursive", sans-serif;
+		background-color: black;
+		/*text-transform: uppercase;*/
+		text-align: center;
+		color: #666 !important;
+	}
+
+h1,h2,h3{
+	text-transform: uppercase;
+	letter-spacing: 4px;
+	color: #666 !important;
+
+}
 .navbar{
 		border-radius: 0;
 		font-weight: bold;
@@ -15,6 +30,7 @@ div{
 		opacity: 0.8;
 		border-color: transparent;
 		color: #fff;
+		text-transform: uppercase;
 }
 
 .navbar li a, .navbar, .navbar-brand{
@@ -36,19 +52,9 @@ div{
 	font-weight: bolder;
 }
 
-body{
-		font: 400 15px/1.8 "Open Sans","Lato", "cursive", sans-serif;
-		background-color: black;
-	}
 
-ul{
-	text-transform: uppercase;
-	
-}
-
-footer{
-	text-transform:uppercase;
-	text-align:center;
+.carousel-caption h3{
+	color: #fff !important;
 }
 
 .link {
@@ -67,22 +73,16 @@ footer{
 }
 
 .name:hover{
-	border-color:#666666;
+	border-color:#667;
 }
 
-.preview{
-	display:hidden;
+.preview {
+	display:none;
 }
 
 .glyphicon-shopping-cart{
 	height:20px;
 	width:20px;
-}
-
-
-
-.carousel-caption h3{
-	color: #fff !important;
 }
 
 .td1{
@@ -120,7 +120,24 @@ footer{
 	margin:0;
 }
 
-.navbar input[type=text]{
+#search-bar input[type=text]{
 	background-color: #fff !important;
 	border-color: transparent;
+}
+
+#play1, #play2, #play3, #play4{
+	display: none;
+}
+
+#itunes{
+	text-decoration: none;
+	color: inherit;
+}
+
+.glyphicon-shopping-cart, .glyphicon-play{
+	color: #fff !important;
+}
+
+.show {
+
 }
