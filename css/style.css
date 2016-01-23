@@ -79,13 +79,8 @@ input[type=text]:focus, input[type=number]:focus{
 	color: #AAEE46 !important;
 }
 
-
 .carousel-caption h3{
 	color: #AAEE46 !important;
-}
-
-.link {
-	border:2px solid black;
 }
 
 .container{
@@ -144,9 +139,11 @@ input[type=text]:focus, input[type=number]:focus{
 }
 
 #search-bar input[type=text]{
-	background-color: #fff !important;
-	border-color: transparent;
+	background-color: #DCCCE8 !important;
+
 }
+
+
 
 #play1, #play2, #play3, #play4{
 	display: none;
