@@ -64,9 +64,16 @@ input[type=text]:focus, input[type=number]:focus{
 
 }
 
+<<<<<<< HEAD
+body{
+		font: 400 15px/1.8 "Open Sans","Lato", "cursive", sans-serif;
+		background-color: black;
+	}
+=======
 .navbar-nav li a:hover{
 	color: #fff !important;
 }
+>>>>>>> 28f917a15ab2116b04111211531a2aeef116aed7
 
 .navbar-nav li.active a{
 	color:#fff !important;
@@ -107,9 +114,25 @@ input[type=text]:focus, input[type=number]:focus{
 	width:20px;
 }
 
+<<<<<<< HEAD
+
+
+.carousel-caption h3{
+	color: #fff !important;
+}
+
+.td1{
+	background:#2d2d35;
+	color:#bdbdbd;
+}
+
+.td1 h3{
+	color: #fff;
+=======
 .td1{
 	background:black;
 	color:#DCCCE8;
+>>>>>>> 28f917a15ab2116b04111211531a2aeef116aed7
 }
 
 .td1 p{
@@ -118,6 +141,19 @@ input[type=text]:focus, input[type=number]:focus{
 
 .btn{
 	padding: 10px 20px;
+<<<<<<< HEAD
+	background-color: #333;
+	color: #f1f1f1;
+	border-radius: 0;
+}
+
+.btn:hover{
+	border:1px solid #333;
+	background-color: #fff;
+	color:#000;
+}
+
+=======
 	background-color: #6b585b;
 	color: black;
 	border-radius: 0;
@@ -173,3 +209,4 @@ input[type=text]:focus, input[type=number]:focus{
 	color:black;
 
 }
+>>>>>>> 28f917a15ab2116b04111211531a2aeef116aed7
