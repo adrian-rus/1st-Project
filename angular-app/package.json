@@ -1,0 +1,10 @@
+{
+  "name": "angular-app",
+  "version": "1.0.0",
+  "description": "sample angular js app",
+  "scripts": {
+    
+  },
+  "author": "Adrian Rus <>",
+  "license": "MIT"
+}

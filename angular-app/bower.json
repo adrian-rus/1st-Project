@@ -1,0 +1,28 @@
+{
+  "name": "angular-app",
+  "version": "1.0.0",
+  "homepage": "https://github.com/adrian-rus/1st-Project",
+  "authors": [
+    "Adrian Rus <adrian.rus@live.com>"
+  ],
+  "description": "sample angularjs app",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.9",
+    "bootstrap": "~3.3.6",
+    "jquery": "~2.2.0",
+    "angular-cookies": "~1.4.9",
+    "angular-route": "~1.4.9",
+    "angular-sanitize": "~1.4.9"
+  }
+}

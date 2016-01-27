@@ -1,0 +1,257 @@
+<!doctype html>
+<html ng-app="cheshmak" ng-controller="IndexCtrl" class="no-js">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+  <!-- build:css(.) styles/vendor.css -->
+  <!-- bower:css -->
+  <link rel="stylesheet" href="bower_components/angular-material/angular-material.css" />
+  <link rel="stylesheet" href="bower_components/angular-toastr/dist/angular-toastr.css" />
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+  <link rel="stylesheet" href="bower_components/bootstrap-material-design/dist/css/material.css" />
+  <link rel="stylesheet" href="bower_components/bootstrap-material-design/dist/css/ripples.css" />
+  <link rel="stylesheet" href="bower_components/bootstrap-rtl/dist/css/bootstrap-rtl.css" />
+  <link rel="stylesheet" href="bower_components/c3/c3.css" />
+  <link rel="stylesheet" href="bower_components/ng-table/dist/ng-table.css" />
+  <link rel="stylesheet" href="bower_components/ngprogress/ngProgress.css" />
+  <link rel="stylesheet" href="bower_components/ng-prettyjson/src/ng-prettyjson.css" />
+  <!-- endbower -->
+  <link rel="stylesheet" href="bower_components/highlight/src/styles/github.css" />
+  <!-- endbuild -->
+
+  <!-- build:css(.tmp) styles/main.css -->
+  <link href="styles/main.css" rel="stylesheet">
+  <link href="styles/app.css" rel="stylesheet">
+  <link href="styles/c3-custom.css" rel="stylesheet">
+  <link href="styles/font-awesome.min.css" rel="stylesheet">
+  <link href="styles/fonts.css" rel="stylesheet">
+  <link href="styles/material-design-iconic-font.min.css" rel="stylesheet">
+  <link href="styles/index.css" rel="stylesheet">
+  <link href="styles/iran-map.css" rel="stylesheet">
+  <!-- endbuild -->
+
+  <!-- build:css(.tmp) styles/controllers.css -->
+  <link href="styles/controllers/sdk.css" rel="stylesheet">
+  <link href="styles/controllers/users-edit.css" rel="stylesheet">
+  <link href="styles/controllers/funnels.css" rel="stylesheet">
+  <link href="styles/controllers/send-push-dialog.css" rel="stylesheet">
+  <!-- endbuild -->
+
+  <!-- build:css(.tmp) styles/directives/directives.css -->
+  <link href="styles/directives/user-menu.css" rel="stylesheet">
+  <link href="styles/directives/info.css" rel="stylesheet">
+  <link href="styles/directives/navigation.css" rel="stylesheet">
+  <link href="styles/directives/top-three.css" rel="stylesheet">
+  <link href="styles/directives/date-selector.css" rel="stylesheet">
+  <link href="styles/directives/date-picker.css" rel="stylesheet">
+  <link href="styles/directives/stats-summary.css" rel="stylesheet">
+  <link href="styles/directives/stat-box.css" rel="stylesheet">
+  <link href="styles/directives/event-navbar.css" rel="stylesheet">
+  <link href="styles/directives/users-location.css" rel="stylesheet">
+  <link href="styles/directives/stat-selector.css" rel="stylesheet">
+  <link href="styles/directives/stats-table.css" rel="stylesheet">
+  <link href="styles/directives/loader.css" rel="stylesheet">
+  <link href="styles/directives/intro.css" rel="stylesheet">
+  <!-- endbuild -->
+</head>
+
+<body ng-app="cheshmak">
+  <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+  <div class="app app-header-fixed">
+
+
+    <loader></loader>
+
+    <div ng-switch="path" class="full">
+
+      <div ng-switch-when="login" class="full">
+        <div class="full" ng-view></div>
+      </div>
+
+      <div ng-switch-when="confirmForgot" class="full">
+        <div class="full" ng-view></div>
+      </div>
+
+      <div ng-switch-default class="full">
+
+        <!--Modals-->
+        <app-modal></app-modal>
+        <user-modal></user-modal>
+        <help-modal></help-modal>
+        <verify-delete></verify-delete>
+        <code-box></code-box>
+        <suggestions></suggestions>
+        <message-box></message-box>
+        <event-add-chart-modal></event-add-chart-modal>
+        <funnel-add-modal></funnel-add-modal>
+        <!-- header -->
+        <div data-ng-include=" 'views/header.html' " class="app-header navbar">
+        </div>
+        <!-- header -->
+
+        <!--content-->
+        <div class="main-container">
+          <aside id="aside" class="app-aside hidden-xs bg-black" ng-show="navigationShow">
+            <navigation apps="apps"></navigation>
+          </aside>
+
+          <div id="content" class="app-content" role="main">
+            <div class="app-content-body ">
+              <div ng-view></div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- footer -->
+        <div data-ng-include=" 'views/footer.html' ">
+        </div>
+        <!-- footer -->
+
+      </div>
+    </div>
+    <script src="//maps.googleapis.com/maps/api/js?libraries=places&sensor=false&language=en&v=3.20"></script>
+    <!-- build:js(.) scripts/vendor.js -->
+    <script src="bower_components/highlight/src/highlight.js"></script>
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-aria/angular-aria.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-drag-and-drop-lists/angular-drag-and-drop-lists.js"></script>
+    <script src="bower_components/angular-highlightjs/build/angular-highlightjs.js"></script>
+    <script src="bower_components/angular-material/angular-material.js"></script>
+    <script src="bower_components/angular-md5/angular-md5.js"></script>
+    <script src="bower_components/angular-persian-datepicker/angular-persian-datepicker.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-toastr/dist/angular-toastr.tpls.js"></script>
+    <script src="bower_components/angular-simple-logger/dist/angular-simple-logger.js"></script>
+    <script src="bower_components/lodash/lodash.js"></script>
+    <script src="bower_components/angular-google-maps/dist/angular-google-maps.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/bootstrap-material-design/dist/js/material.js"></script>
+    <script src="bower_components/bootstrap-material-design/dist/js/ripples.js"></script>
+    <script src="bower_components/d3/d3.js"></script>
+    <script src="bower_components/c3/c3.js"></script>
+    <script src="bower_components/cookies-js/dist/cookies.js"></script>
+    <script src="bower_components/momentjs/moment.js"></script>
+    <script src="bower_components/zeroclipboard/dist/ZeroClipboard.js"></script>
+    <script src="bower_components/ng-clip/src/ngClip.js"></script>
+    <script src="bower_components/ng-table/dist/ng-table.js"></script>
+    <script src="bower_components/ngprogress/build/ngprogress.js"></script>
+    <script src="bower_components/ng-file-upload/angular-file-upload-shim.js"></script>
+    <script src="bower_components/ng-file-upload/angular-file-upload.js"></script>
+    <script src="bower_components/ng-prettyjson/src/ace.js"></script>
+    <script src="bower_components/ng-prettyjson/src/ng-prettyjson.js"></script>
+    <!-- endbower -->
+    <script src="bower_components/moment-jalaali/moment-jalaali.js"></script>
+    <!-- endbuild -->
+
+    <script src="/package"></script>
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="scripts/polyfills/addDays.js"></script>
+    <script src="scripts/polyfills/ng-prettyjson.js"></script>
+    <script src="scripts/vendor/angular-c3.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/index.js"></script>
+    <script src="scripts/controllers/login.js"></script>
+    <script src="scripts/controllers/help.js"></script>
+    <script src="scripts/controllers/activation.js"></script>
+    <script src="scripts/controllers/confirmforgot.js"></script>
+    <script src="scripts/controllers/dashboard.js"></script>
+    <script src="scripts/controllers/events.js"></script>
+    <script src="scripts/controllers/messages.js"></script>
+    <script src="scripts/controllers/sdk.js"></script>
+    <script src="scripts/controllers/settings.js"></script>
+    <script src="scripts/controllers/statisticstotalappsnum.js"></script>
+    <script src="scripts/controllers/statisticstotaldevelopersnum.js"></script>
+    <script src="scripts/controllers/statisticscarriers.js"></script>
+    <script src="scripts/controllers/statisticsdevices.js"></script>
+    <script src="scripts/controllers/statisticsbrands.js"></script>
+    <script src="scripts/controllers/statisticslocations.js"></script>
+    <script src="scripts/controllers/statisticsplatforms.js"></script>
+    <script src="scripts/controllers/statisticsusers.js"></script>
+    <script src="scripts/controllers/statisticsusersloyalty.js"></script>
+    <script src="scripts/controllers/statisticsversions.js"></script>
+    <script src="scripts/controllers/users.js"></script>
+    <script src="scripts/controllers/usersedit.js"></script>
+    <script src="scripts/directives/event-add-chart-modal.js"></script>
+    <script src="scripts/directives/app-modal.js"></script>
+    <script src="scripts/directives/apps-table.js"></script>
+    <script src="scripts/directives/code-box.js"></script>
+    <script src="scripts/directives/date-selector.js"></script>
+    <script src="scripts/directives/event-navbar.js"></script>
+    <script src="scripts/directives/help-modal.js"></script>
+    <script src="scripts/directives/info.js"></script>
+    <script src="scripts/directives/intro.js"></script>
+    <script src="scripts/directives/iranmap.js"></script>
+    <script src="scripts/directives/loader.js"></script>
+    <script src="scripts/directives/login-register.js"></script>
+    <script src="scripts/directives/message-box.js"></script>
+    <script src="scripts/directives/messages-table.js"></script>
+    <script src="scripts/directives/navigation.js"></script>
+    <script src="scripts/directives/stat-box.js"></script>
+    <script src="scripts/directives/stat-selector.js"></script>
+    <script src="scripts/directives/stats-summary.js"></script>
+    <script src="scripts/directives/stats-table.js"></script>
+    <script src="scripts/directives/suggestions.js"></script>
+    <script src="scripts/directives/tags-navbar.js"></script>
+    <script src="scripts/directives/top-three.js"></script>
+    <script src="scripts/directives/user-menu.js"></script>
+    <script src="scripts/directives/user-modal.js"></script>
+    <script src="scripts/directives/users-location.js"></script>
+    <script src="scripts/directives/users-table.js"></script>
+    <script src="scripts/directives/verify-delete.js"></script>
+    <script src="scripts/directives/date-picker.js"></script>
+    <script src="scripts/directives/bank-card-validator.js"></script>
+    <script src="scripts/services/appservice.js"></script>
+    <script src="scripts/services/authenticationservice.js"></script>
+    <script src="scripts/services/dateservice.js"></script>
+    <script src="scripts/services/loginservice.js"></script>
+    <script src="scripts/services/profileservice.js"></script>
+    <script src="scripts/services/signupservices.js"></script>
+    <script src="scripts/services/statisticsservice.js"></script>
+    <script src="scripts/services/suggestionsservice.js"></script>
+    <script src="scripts/services/tokeninterceptor.js"></script>
+    <script src="scripts/services/httpinterceptor.js"></script>
+    <script src="scripts/services/translationservice.js"></script>
+    <script src="scripts/filters/appicon.js"></script>
+    <script src="scripts/filters/profilepic.js"></script>
+    <script src="scripts/filters/shamsidate.js"></script>
+    <script src="scripts/services/userservice.js"></script>
+    <script src="scripts/directives/pw-check.js"></script>
+    <script src="scripts/controllers/exceptionlist.js"></script>
+    <script src="scripts/directives/persiandate.js"></script>
+    <script src="scripts/controllers/exceptiondetail.js"></script>
+    <script src="scripts/controllers/statisticsviews.js"></script>
+    <script src="scripts/services/eventstatistics.js"></script>
+    <script src="scripts/services/iranmapdata.js"></script>
+    <script src="scripts/controllers/statisticsfunnels.js"></script>
+    <script src="scripts/directives/funneladdmodal.js"></script>
+    <script src="scripts/services/funnelstatistics.js"></script>
+    <script src="scripts/services/utilsservice.js"></script>
+    <script src="scripts/controllers/send-push-dialog.js"></script>
+    <script src="scripts/controllers/statistics-push-list.js"></script>
+    <script src="scripts/directives/push-table.js"></script>
+    <script src="scripts/services/pushservice.js"></script>
+    <script src="scripts/controllers/payouts.js"></script>
+    <script src="scripts/services/tableparams.js"></script>
+  <script src="scripts/directives/numberfiltertype.js"></script>
+  <script src="scripts/directives/stringfiltertype.js"></script>
+  <script src="scripts/directives/datefiltertype.js"></script>
+    <!-- endbuild -->
+</body>
+
+</html>
