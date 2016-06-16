@@ -1,4 +1,5 @@
-div{
+/*setting the defaults for the page*/
+html{
 	-webkit-box-sizing:border-box;
 	-moz-box-sizing:border-box;
 	-ms-box-sizing:border-box;
@@ -7,6 +8,7 @@ div{
 	padding:0;
 }
 
+/*General styling*/
 body{
 		font: 400 15px/1.8 "Open Sans","Lato", "cursive", sans-serif;
 		background-color: black;
@@ -15,16 +17,21 @@ body{
 		color: #DCCCE8 !important;
 	}
 
+
 h1,h2,h3{
 	text-transform: uppercase;
 	letter-spacing: 4px;
-	color: #AAEE46 !important;
+	color: #5CC9D6 !important;
 
 }
 
 footer{
-	color: #AAEE46 !important;
+	color: #5CC9D6 !important;
 	background-color: #6b585b;
+	padding: 20px;
+	text-align: right;
+	text-transform: uppercase;
+
 }
 
 input[type=text], input[type=number]{
@@ -32,22 +39,27 @@ input[type=text], input[type=number]{
 }
 
 input[type=text]:focus, input[type=number]:focus{
-	border:2px solid #AAEE46;
+	border:2px solid #5CC9D6;
 	background-color: #6b585b;
+	color: #fff;
 }
 
-#comments{
-	background-color: #DCCCE8;
-
+/*styling div containers and fonts*/
+.container{
+	padding: 80px 120px;
 }
 
-#comments:focus{
-	background-color: #6b585b;
-	border: 2px solid #AAEE46;
-
+.td1{
+	background:black;
+	color:#DCCCE8;
 }
 
-.navbar{
+.td1 p{
+	font-style: italic;
+}
+
+/*styling the navigation bar*/
+.navbar, .navbar-default, .navbar-fixed-top{
 		border-radius: 0;
 		font-weight: bold;
 		font-size: 18px !important;
@@ -57,15 +69,32 @@ input[type=text]:focus, input[type=number]:focus{
 		border:none;
 		color: #DCCCE8;
 		text-transform: uppercase;
+		padding: 20px;
+		margin-bottom: 20px;
+}
+/* attempt to make up a glass nav bar
+.navbar ul{
+	background: linear-gradient(90deg, rgba(255,255,255,0) 0%,
+		rgba(255,255,255,0.2) 25%,
+		rgba(255,255,255,0.2) 75%,
+		rgba(255,255,255,0) 100%);
+	box-shadow: 0 0 25px rgba(0,0,0,0.1),
+	inset 0 0 1px rgba(255,255,255,0.6);
 }
 
+.navbar ul li{
+	display: inline-block;
+}
+*/
 .navbar li a, .navbar, .navbar-brand{
 	color: #DCCCE8 !important;
-
+	
 }
 
 .navbar-nav li a:hover{
 	color: #fff !important;
+	background-color: #000 !important;
+	border:none;
 }
 
 .navbar-nav li.active a{
@@ -76,17 +105,78 @@ input[type=text]:focus, input[type=number]:focus{
 .navbar-brand{
 	font-size: 20px !important;
 	font-weight: bolder;
-	color: #AAEE46 !important;
+	color: #5CC9D6 !important;
 }
 
+nav img{
+	width: 40px;
+	height: 40px;
+	padding: 0;
+}
+
+/*styling home page carousel*/
 .carousel-caption h3{
-	color: #AAEE46 !important;
+	color: #5CC9D6 !important;
+}
+.carousel-inner img{
+	-webkit-filter:grayscale(70%);
+	filter: grayscale(70%);
+	margin:auto;
+	width: 100%;
 }
 
-.container{
-	padding: 80px 120px;
+/*styling music page carousel*/
+.carouselm{
+	height: 350px;
+	width: 350px;
 }
 
+.carouselm h3,p{
+	background-color: #000 !important;
+	opacity: .8;
+	border-radius: 10px;
+}
+
+/*styling albums*/
+.album-list {
+	display: inline-block;
+	padding: 10px;
+	text-align: top center;
+	vertical-align: center;
+}
+
+#play1, #play2, #play3, #play4{
+	display: none;
+}
+
+#itunes{
+	text-decoration: none;
+	color: inherit;
+}
+
+.glyphicon-shopping-cart, .glyphicon-play{
+	color: #5CC9D6 !important;
+}
+
+.show {
+
+}
+
+.list-group-item{
+	background-color: #DCCCE8;
+	color: black;
+
+}
+
+/*styling band memebers photos*/
+.img-circle{
+	-webkit-filter:grayscale(80%);
+	filter: grayscale(80%);
+	height: 250px;
+	width: 250px;
+}
+
+/*styling band members profile description*/
 .name{
 	opacity:0.8;
 	border: solid transparent 8px;
@@ -102,19 +192,26 @@ input[type=text]:focus, input[type=number]:focus{
 	display:none;
 }
 
+/*styling comments section on contact page*/
+#comments{
+	background-color: #DCCCE8;
+	color: #fff;
+
+}
+
+#comments:focus{
+	background-color: #6b585b;
+	border: 2px solid #5CC9D6;
+	color: #fff;
+
+}
+
 .glyphicon-shopping-cart{
 	height:20px;
 	width:20px;
 }
 
-.td1{
-	background:black;
-	color:#DCCCE8;
-}
-
-.td1 p{
-	font-style: italic;
-}
+/*gigs page button styling*/
 
 .btn{
 	padding: 10px 20px;
@@ -129,6 +226,8 @@ input[type=text]:focus, input[type=number]:focus{
 	color:#000;
 }
 
+/*old version styling:
+
 #search-bar{
 	display: none;
 }
@@ -141,35 +240,10 @@ input[type=text]:focus, input[type=number]:focus{
 #search-bar input[type=text]{
 	background-color: #DCCCE8 !important;
 
-}
+}*/
 
-
-
-#play1, #play2, #play3, #play4{
-	display: none;
-}
-
-#itunes{
-	text-decoration: none;
-	color: inherit;
-}
-
-.glyphicon-shopping-cart, .glyphicon-play{
-	color: #AAEE46 !important;
-}
-
-.show {
-
-}
-
-.list-group-item{
-	background-color: #DCCCE8;
-	color: black;
-
-}
-
-.thumbnail{
+/*.thumbnail{
 	background-color: #DCCCE8;
 	color:black;
 
-}
+}*/
